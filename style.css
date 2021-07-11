@@ -1,0 +1,558 @@
+*{
+    box-sizing:border-box;
+    margin: 0;
+    padding:0;
+}
+
+body{
+    width:100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dfd9d9;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* #inputs div{
+    position: relative;
+} */
+.error_message{
+    display: none;
+}
+
+#inputs div .error_message{
+    position: absolute;
+    top: 100%;
+}
+
+.error input{
+    border:2px solid #db3445 !important;
+}
+.error i{
+    color: #db3445 !important;
+}
+.error .error_message{
+    display: block;
+    width: 100%;
+    color: #db3445;
+    padding: 0.1rem 1rem;
+}
+
+
+.valid input{
+    border:2px solid #1ca753 !important;
+}
+.valid i{
+    color: #1ca753 !important;
+}
+
+.hidden{
+    display: none !important;
+}
+
+.invisible{
+    visibility: hidden;
+}
+
+.fade{
+    animation: fade 0.5s linear 1;
+}
+@keyframes fade{
+    from {
+        opacity: 100%;
+    } to {
+        opacity: 20%;
+    }
+}
+
+.rise{
+    animation: rise 0.5s linear 1;
+}
+@keyframes rise{
+    from {
+        opacity: 20%;
+    } to {
+        opacity: 100%;
+    }
+}
+
+.expand{
+    animation : expand 0.5s linear 1;
+}
+@keyframes expand{
+    from{
+        width: 0%;
+    }
+    to{
+        width: auto;
+    }
+}
+
+
+.page_container{
+    width: 1000px;
+    height: 80%;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+/* ============================== login ================================ */
+.page_container .login,
+.page_container .signup{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    /* transition: all 0.2s ease; */
+}
+
+.s_move_right{
+    transform:translateX(53.5%);
+}
+
+.l_move_right{
+    transform: translateX(186%);
+}
+
+.s_move_left{
+    transform: translateX(-53.5%);
+}
+
+.l_move_left{
+    transform: translateX(-186%);
+}
+
+.move_left{
+    transform: translateX(-100%);
+}
+.move_right{
+    transform: translateX(100%);
+}
+.move_neutral{
+    transform: translateX(0);
+}
+
+.page_container .login #logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    z-index: 100;
+}
+
+.page_container .signup #logo{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    z-index: 100;
+}
+
+.page_container .login div,
+.page_container .signup div{
+    margin: 1.5rem 0;
+}
+
+/* ---------- login > left ------------- */
+.page_container .login #left,
+.page_container .signup #right{
+    width: 65%;
+    transition: all 0.5s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.page_container .signup #right{
+    display: flex;
+    flex-flow: column wrap;
+    overflow:hidden;
+    justify-content: center;
+}
+
+.page_container .signup #right #registration_container{
+    width:100%;
+    transition: all 0.5s ease-out;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center ;
+    height: 100%;
+}
+
+.page_container .signup #right #email_confirmation_container{
+    width: 100%;
+    transition: all 0.5s ease-out;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center ;
+    height: 100%;
+}
+
+.page_container .login #left #description,
+.page_container .signup #right #description,
+.page_container .signup #email_confirmation_container #description{
+    font-size: 2rem;
+    font-weight: bold;
+    width:100%;
+    text-align: center;
+    color: #3d3a3a;
+}
+
+.page_container .login #left #description .website_name,
+.page_container .signup #right #description .website_name{
+    color: #ff5050;
+}
+
+.page_container .login #left #inputs,
+.page_container .signup #right #inputs,
+.page_container .signup #email_confirmation_container #inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.page_container .signup #right #inputs #name_bx{
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.page_container .signup #right #inputs #name_bx div{
+    width:48%;
+    /* margin: 0; */
+}
+
+.page_container .login #left #inputs div,
+.page_container .signup #right #inputs div,
+.page_container .signup #email_confirmation_container #inputs div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    /* margin: 1.2rem 0; */
+    position: relative;
+}
+
+.page_container .login #left #inputs label,
+.page_container .signup #right #inputs label,
+.page_container .signup #email_confirmation_container #inputs label{
+    position: absolute;
+    left: 1rem;
+    top: 1.2rem;
+    color: #a3a2a2;
+}
+
+.page_container .login #left #inputs input,
+.page_container .signup #right #inputs input,
+.page_container .signup #email_confirmation_container #inputs input{
+    width: 100%;
+    border: none;
+    background: #dfe7ee;
+    font-size: 1.1rem;
+    padding: 1rem 0 1rem 2.5rem;
+    border-radius: 0.5rem;
+}
+
+.page_container .login #left #inputs input:focus,
+.page_container .signup #right #inputs input:focus,
+.page_container .signup #email_confirmation_container #inputs input:focus{
+    outline: none;
+}
+
+.page_container .login #left #inputs input::placeholder,
+.page_container .signup #right #inputs input::placeholder,
+.page_container .signup #email_confirmation_container #inputs input::placeholder{
+    color: #a3a2a2;
+}
+
+
+.page_container .login #left  #password_reset{
+    width: 100%;
+    text-align: center;
+}
+
+.page_container .login #left #password_reset a{
+    text-decoration:underline;
+    font-size: 1.2rem;
+    color: #3d3a3a;
+    transition:all 0.2s ease;
+}
+
+.page_container .login #left #password_reset a:hover{
+    color:blue;
+}
+
+.page_container .login #left #actions ,
+.page_container .signup #right #actions,
+.page_container .signup #email_confirmation_container #actions{
+    width: 100%;
+    text-align: center;
+}
+
+.page_container .login #left #actions button,
+.page_container .signup #right #actions button,
+.page_container .signup #email_confirmation_container #actions button{
+    padding:0.8rem 4.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: whitesmoke;
+    background:#db3445;
+    border: 2px solid #db3445;
+    cursor: pointer;
+    border-radius: 2rem;
+    transition:all 0.2s ease;
+    margin:0.5rem 1rem;
+}
+
+.page_container .login #left #actions button:hover,
+.page_container .signup #right #actions button:hover,
+.page_container .signup #email_confirmation_container #actions button:hover{
+    background: none;
+    color: #db3445;
+}
+
+/* -------- login > right || signup > left ------------------- */
+
+.page_container .login #right,
+.page_container .signup #left{
+    width:35%;
+    height: 100%;
+    background-color: #f71735;
+    background-image: linear-gradient(147deg, #f71735 0%, #db3445 74%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 0.5s ease-out;
+    z-index: 10;
+    margin: 0;
+}
+
+.page_container .login #right #inquiry,
+.page_container .signup #left #inquiry{
+    font-size: 2rem;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    color: #0f0e0e;
+    padding: 10px;
+}
+
+.page_container .login #right #inquiry .website_name,
+.page_container .signup #left #inquiry .website_name{
+    color:white;
+}
+
+.page_container .login #right #description,
+.page_container .signup #left #description{
+    width: 100%;
+    text-align: center;
+    padding: 0 10px;
+    font-size: 1.2rem;
+}
+
+.page_container .login #right #actions,
+.page_container .signup #left #actions{
+    width:100%;
+    text-align: center;
+}
+
+.page_container .login #right #actions button,
+.page_container .signup #left #actions button{
+    padding:0.8rem 4.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background: whitesmoke;
+    color:#db3445;
+    border: 2px solid whitesmoke;
+    cursor: pointer;
+    border-radius: 2rem;
+}
+
+.page_container .login #right #actions button:hover,
+.page_container .signup #left #actions button:hover{
+    background: none;
+    color: whitesmoke;
+    transition:all 0.2s ease;
+}
+
+
+/* ----------- signup > email_confirmation ---------- */
+
+/* .page_container .signup #email_confirmation_container{
+    width: 65%;
+    transition: all 0.5s ease-out;
+} */
+
+.page_container .signup #email_confirmation_container #actions{
+    margin: 0;
+}
+.page_container .signup #email_confirmation_container #seperator{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.page_container .signup #email_confirmation_container #seperator div{
+    height: 2px;
+    width: 80%;
+    background:#a3a2a2;
+}
+
+
+.page_container .signup #email_confirmation_container #code_resend{
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+}
+
+.page_container .signup #email_confirmation_container #code_resend p{
+    font-size:1.2rem;
+    padding:1rem;
+}
+
+.page_container .signup #email_confirmation_container #code_resend button{
+    padding:0.8rem 4rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: whitesmoke;
+    background:#db3445;
+    border: 2px solid #db3445;
+    cursor: pointer;
+    border-radius: 2rem;
+    transition:all 0.2s ease;
+}
+
+.page_container .signup #email_confirmation_container #code_resend button:hover{
+    background: none;
+    color: #db3445;
+}
+
+
+
+
+@media screen and (max-width:1000px) {
+    .page_container{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (min-width:800px) and (max-width:900px) {
+    .page_container .login #left #inputs div, 
+    .page_container .signup #right #inputs div, 
+    .page_container .signup #email_confirmation_container #inputs div {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:800px){
+    .page_container .signup #logo{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        z-index: 100;
+    }
+    .page_container .login, 
+    .page_container .signup {
+        display:flex;
+    }
+
+    .page_container .signup{
+        flex-flow: row wrap-reverse;
+    }
+    .page_container .login #left{
+        width:100%;
+        height: 65%;
+        margin: 0;
+        justify-content: flex-end;
+    }
+    .page_container .signup #right{
+        width:100%;
+        height: 75%;
+        margin: 0;
+        flex-flow:row wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+.page_container .login #right{
+    width: 100%;
+    height: 35%;
+    margin: 0;    
+}
+.page_container .signup #left{
+    width: 100%;
+    height: 25%;
+    margin: 0;
+}
+
+.page_container .signup #left #inquiry,
+.page_container .login #right #inquiry{
+    font-size: 1.5rem;
+}
+
+.page_container .signup #right #description,
+.page_container .login #left #description{
+    font-size: 1.6rem;
+}
+
+.page_container .login #left #inputs div, 
+.page_container .signup #right #inputs div, 
+.page_container .signup #email_confirmation_container #inputs div {
+    width: 90%;
+}
+
+.page_container .login div,
+.page_container .signup div{
+    margin: 1rem 0;
+}
+
+.page_container .signup #right #registration_container{
+    height:100%;
+    transition: all 0.5s ease-out;
+}
+.page_container .signup #right #email_confirmation_container{
+    height: 100%;
+}
+
+.s_move_right{
+    transform:translateY(53.5%);
+}
+
+.l_move_right{
+    transform: translateY(186%);
+}
+
+.s_move_left{
+    transform: translateY(-53.5%);
+}
+
+.l_move_left{
+    transform: translateY(-186%);
+}
+
+.move_left{
+    transform: translateY(-100%);
+}
+.move_right{
+    transform: translateY(100%);
+}
+.move_neutral{
+    transform: translateY(0);
+}
+
+}

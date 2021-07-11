@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9, user-scalable=0">
+    <script src="https://kit.fontawesome.com/b4ce6ab53b.js" crossorigin="anonymous"></script>
+    <title>Login|Signup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page_container">
+        <div class="login swap">
+            <div id="logo">
+                <img src="https://ujjwal2021.github.io/home-page/IMG/logo.jpg" height="80" width="80" alt="">
+            </div>
+            <div id="left" class="">
+                <div id="description">
+                    Sign in to <span class="website_name">Website</span>
+                </div>
+                <div id="inputs">
+                    
+                    <div id="email_bx" class="valid">
+                        <label for="email"><i class="fas fa-envelope"></i></label>
+                        <input type="text" id="email" name="email" placeholder="email..."></input>
+                        <p class="error_message" id="email_errors">Invalid Credentials</p>
+                    </div>
+    
+                    <div id="password_bx">
+                        <label for="password"><i class="fas fa-lock"></i></label>
+                        <input type="password" name="password" id="password" placeholder="password..."></input>
+                        <p class="error_message" id="password_errors"></p>
+                    </div>
+                
+                </div>
+                <div id="password_reset">
+                    <a href="#" id="password_reset_link">Forgot your password ?</a>
+                </div>
+                <div id="actions">
+                    <button id="sign_in">SIGN IN</button>
+                </div>
+            </div>
+            <div id="right" class="">
+                <div id="inquiry">
+                    New to <span class="website_name">Website ?</span>
+                </div>
+                <div id="description">
+                    <p>Register your account and start a journey with us !</p>
+                </div>
+                <div id="actions">
+                    <button id="sign_up">SIGN UP</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="signup hidden">
+            <div id="logo">
+                <img src="https://ujjwal2021.github.io/home-page/IMG/logo.jpg" height="80" width="80" alt="">
+            </div>
+            <div id="left">
+                <div id="inquiry">
+                    Already have an <span class="website_name">account ?</span>
+                </div>
+                <div id="actions">
+                    <button id="sign_in">SIGN IN</button>
+                </div>
+            </div>
+            <div id="right" class="">
+                <div id="registration_container" class="">
+
+                    <div id="description">
+                        Register to <span class="website_name">Website</span>
+                    </div>
+                    <div id="inputs">
+                        <div id="name_bx">
+                            <div id="first_name_bx" class="">
+                                <label for="first_name"><i class="fas fa-user"></i></label>
+                                <input type="text" name="first_name" id="first_name" placeholder="First Name ...">
+                                <p class="error_message" id="first_name_errors"></p>
+                            </div>
+                            <div id="last_name_bx">
+                                <label for="last_name"><i class="fas fa-user"></i></label>
+                                <input type="text" name="first_name" id="last_name" placeholder="Last Name ...">
+                                <p class="error_message" id="email_errors"></p>
+                            </div>
+                        </div>
+                        <div id="email_bx" class="">
+                            <label for="email"><i class="fas fa-envelope"></i></label>
+                            <input type="text" name="email" id="email" placeholder="Email ...">
+                            <p class="error_message" id="email_errors"></p>
+                        </div>
+                        <div id="password_bx">
+                            <label for="password"><i class="fas fa-lock"></i></label>
+                            <input type="password" name="password" id="password" placeholder="Password ...">
+                            <p class="error_message" id="password_errors"></p>
+                        </div>
+                        <div id="password2_bx">
+                            <label for="password2"><i class="fas fa-lock"></i></label>
+                            <input type="password" name="password2" id="password2" placeholder="Confirm Password ...">
+                            <p class="error_message" id="password2_errors"></p>
+                        </div>
+                    </div>
+                    <div id="actions">
+                        <button id="submit" >Proceed</button>
+                    </div>
+                </div>
+                <div id="email_confirmation_container" class="invisible">
+                    <div id="description">Email Confirmation</div>
+                    <div id="inputs">
+                        <div id="code_bx" class="">
+                            <label for="code"><i class="fas fa-qrcode"></i></label>
+                            <input type="text" id="code" name="code" placeholder="Confirmation Code ...">
+                            <p class="error_message" id="#code_errors"></p>
+                        </div>
+                    </div>             
+                    <div id="actions">
+                        <button id="back">Back</button>
+                        <button id="register">Register</button>
+                    </div>
+                    <div id="seperator">
+                        <div></div>
+                    </div>
+                    <div id="code_resend">
+                        <p>Didn't receive cofirmation code ?</p>
+                        <button id="send_code">Send Again</button>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <script defer src="script.js"></script>
+</body>
+</html>
