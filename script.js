@@ -30,8 +30,8 @@ doms = [".login",".signup",".signup #right",".signup #left", ".login #left",".lo
 function performSignInToSignUpTransition(doms, classes){
     cleanClass(doms,classes);
     
-    $(".login #right").classList.add("l_move_right");
-    $(".login #left").classList.add("l_move_right");
+    $(".login #right").classList.add("l_move_left");
+    $(".login #left").classList.add("s_move_right");
     $(".login").classList.add("fade")
 
     setTimeout(()=>{
@@ -43,7 +43,7 @@ function performSignInToSignUpTransition(doms, classes){
 function performSignUpToSignIpTransition(doms,classes){
     cleanClass(doms, classes);
 
-    $(".signup #right").classList.add("l_move_right");
+    $(".signup #right").classList.add("s_move_left");
     // $(".signup #email_confirmation_container").classList.add("s_move_left");
     $(".signup #left").classList.add("l_move_right");
     $(".signup").classList.add("fade");
